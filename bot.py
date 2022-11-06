@@ -17,7 +17,7 @@ def query_handler(call):
         answer = 'https://jetsel.ru'
     elif call.data == '2':
         answer = 'Счётчики поситетелей отоброжат реальное кол-во людей '
-    elif call.data == '4':
+    elif call.data == '3':
         answer = 'Записаться можно по ссылке\n https://forms.amocrm.ru/rlrlrcr'
 
     bot.send_message(call.message.chat.id, answer)
@@ -34,7 +34,6 @@ def send_text(message):
         bot.send_message(message.from_user.id, "По кнопке ниже можно перейти на сайт", reply_markup=markup)
     elif message.text.lower()=='счётчики':
         bot.send_message(message.chat.id,'Наши счётчики считаю посителей и отправляют в удобном виде на сервер')
-        
 bot.infinity_polling()
 
 
